@@ -8,7 +8,7 @@ class MenuViewTest(TestCase):
         Menu.objects.create(title='Beef', price=150, inventory=10)
         Menu.objects.create(title='Fish', price=300, inventory=5)
 
-    def test_getall(self):
+    def test_get_all(self):
         response = self.client.get('/restaurant/menu/')
         items = Menu.objects.all()
 
